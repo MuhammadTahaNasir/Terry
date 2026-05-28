@@ -24,7 +24,6 @@ server_log.txt
 *.synctex.gz
 
 # Excluded by user request
-NAVTTC_Final_Dissertation.pdf
 NAVTTC_Final_Report.pdf
 NAVTTC_Final_Report.tex
 Research_Paper.pdf
