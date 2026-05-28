@@ -78,8 +78,8 @@ Get the simulator running locally in seconds.
 
 ```powershell
 # 1. Clone the repository
-git clone https://github.com/MuhammadTahaNasir/Terry.git
-cd Terry
+git clone https://github.com/MuhammadTahaNasir/AI-Negotiation-Bot.git
+cd AI-Negotiation-Bot
 
 # 2. Create and activate a virtual environment
 python -m venv venv
@@ -101,7 +101,7 @@ After starting the server, open **`http://127.0.0.1:5000`** in your browser.
 ## Project Structure
 
 ```text
-Terry/
+AI-Negotiation-Bot/
 ├── app/                  # Frontend presentation layer
 │   ├── app.py            # Flask server and routing API
 │   └── templates/        # Neobrutalist UI templates
