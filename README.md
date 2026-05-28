@@ -17,7 +17,7 @@
 
 ---
 
-![Simulator Interface](screenshots/1.png)
+![Simulator Interface](screenshots/landing_top.png)
 
 ---
 
@@ -48,7 +48,7 @@
 ---
 
 <div align="center">
-  <img src="screenshots/10.png" alt="Simulator Analytics" width="80%">
+  <img src="screenshots/simulator_negotiation_chat.png" alt="Simulator Analytics" width="80%">
 </div>
 
 ---
