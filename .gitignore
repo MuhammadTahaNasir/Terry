@@ -1,0 +1,35 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/bin/
+env/include/
+env/lib/
+env/pyvenv.cfg
+.env
+.ipynb_checkpoints/
+server_log.txt
+
+# LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Excluded by user request
+NAVTTC_Final_Dissertation.pdf
+NAVTTC_Final_Report.pdf
+NAVTTC_Final_Report.tex
+Research_Paper.pdf
+Research_Paper.tex
+citations.bib
+fix_js.py
+test_script.js
+requirements.txt
