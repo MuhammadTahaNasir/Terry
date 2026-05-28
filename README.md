@@ -1,113 +1,131 @@
-# NEGO BOTS - AI Negotiation Simulator 🤖🤝
+<div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-3.0-green)](https://flask.palletsprojects.com)
-[![Reinforcement Learning](https://img.shields.io/badge/RL-Stable--Baselines3-orange)](https://stable-baselines3.readthedocs.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
+# 🤖🤝 NEGO BOTS 
 
-> 🌐 **Repository:** [https://github.com/MuhammadTahaNasir/Terry](https://github.com/MuhammadTahaNasir/Terry)
+**An AI-driven Negotiation Simulator bridging Human Psychology with Reinforcement Learning.**
 
-A cutting-edge web application that simulates real-world negotiations using Reinforcement Learning. Built with Flask and Stable-Baselines3, this project demonstrates how AI agents can learn complex bargaining strategies, handle hidden constraints, and make dynamic concessions. 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-3.0-black?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
----
+**Nego Bots is an interactive web-based simulator where you can watch AI models battle over pricing, or step into the arena yourself and test your haggling skills against a mathematically ruthless AI Seller.**
 
-## 🌟 Features
+[Explore the Code](#architecture) • [Setup Guide](#quick-install) • [Features](#features-breakdown)
 
-- **Two Simulation Modes**: 
-  - 🤖 **AI vs AI:** Watch two distinct RL models (Buyer and Seller) negotiate autonomously.
-  - 👤 **Human vs AI:** Step into the shoes of the Buyer and test your haggling skills against a trained AI Seller.
-- **Advanced RL Backend**: Powered by Proximal Policy Optimization (PPO) and a custom Gymnasium environment.
-- **Dynamic Market Intelligence**: Live market sentiment appraisals that simulate real-world economic pressures.
-- **Neobrutalist UI**: A stunning, modern, and highly interactive frontend interface.
-- **Live Analytics**: Real-time tracking of concession curves and deal prices using Chart.js.
+</div>
 
 ---
 
-## 📸 Previews
-
-### Simulator Interface
-![Simulator UI](SS/1.png)
-
-### Live Concession Analytics
-![Simulator Charts](SS/10.png)
+![Simulator Interface](SS/1.png)
 
 ---
 
-## 📂 Project Structure
+## What Can You Do?
 
+**From the Player's perspective:**
+- **Human vs AI:** Negotiate against a fully autonomous AI seller that adapts to your offers.
+- **AI vs AI:** Watch two distinct Reinforcement Learning agents clash in a rapid-fire bargaining session.
+- **Dynamic Feedback:** See live market appraisals and a real-time pressure gauge indicating how much of your budget is left.
+
+**From the Developer's perspective:**
+- **Train Custom Agents:** Modify `training/train.py` to bake unique personalities (Aggressive, Cooperative) into the RL agents.
+- **Custom Gym Environment:** The logic runs on a bespoke Gymnasium environment designed specifically for multi-turn negotiation mechanics.
+- **Analyze Performance:** View live Chart.js graphs mapping out the concession curves of both parties.
+
+---
+
+## Features Breakdown
+
+| Feature | What it does |
+|---------|--------------|
+| **Neobrutalist UI** | A stunning, high-contrast, interactive interface designed for maximum engagement. |
+| **RL Backend (PPO)** | Proximal Policy Optimization powers the agents' decision-making and dynamic pricing strategy. |
+| **Live Chat Simulation** | Realistic typing indicators and speech-bubble chat interfaces. |
+| **Hidden Constraints** | Buyers have secret budgets, Sellers have secret floors. AI learns to deduce these limits over time. |
+| **Concession Analytics** | Generates real-time visual charts to track bargaining history. |
+
+---
+
+<div align="center">
+  <img src="SS/10.png" alt="Simulator Analytics" width="80%">
+</div>
+
+---
+
+## Architecture
+
+Three powerful layers work seamlessly together:
+
+| Component | Function | Built with |
+|-----------|---------------|------------|
+| **Frontend** | Renders the interactive UI, chat logs, and live concession charts. | HTML5, CSS (Neobrutalism), Vanilla JS, Chart.js |
+| **Backend API** | Bridges the frontend to the RL logic, handling state and session persistence. | Python, Flask |
+| **RL Environment** | Custom multi-turn bargaining environment defining rewards and action spaces. | Gymnasium, Stable-Baselines3, PyTorch |
+
+---
+
+## Quick Install
+
+Get the simulator running locally in seconds.
+
+```powershell
+# 1. Clone the repository
+git clone https://github.com/MuhammadTahaNasir/Terry.git
+cd Terry
+
+# 2. Create and activate a virtual environment
+python -m venv venv
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # macOS/Linux
+
+# 3. Install the engine dependencies
+# (Includes gymnasium, stable-baselines3, torch, flask, pandas)
+pip install gymnasium stable-baselines3 torch flask numpy matplotlib seaborn pandas
+
+# 4. Boot the server
+python app/app.py
 ```
-negotiation_project/
-├── app/
-│   ├── app.py                  # Main Flask application entry point
-│   └── templates/
-│       ├── index.html          # Interactive Simulator UI
-│       └── landing.html        # Welcome/Landing Page
-├── env/
-│   └── negotiation_env.py      # Custom Gymnasium environment for RL
-├── models/
-│   ├── trained_buyer.zip       # Pre-trained PPO Buyer Agent
-│   └── trained_seller.zip      # Pre-trained PPO Seller Agent
-├── training/
-│   └── train.py                # Scripts for training the RL models
-├── analysis/                   # Analytics and evaluation scripts
-├── graphs/                     # Output visualizations of model performance
-└── README.md
+
+After starting the server, open **`http://127.0.0.1:5000`** in your browser.
+
+---
+
+## Project Structure
+
+```text
+Terry/
+├── app/                  # Frontend presentation layer
+│   ├── app.py            # Flask server and routing API
+│   └── templates/        # Neobrutalist UI templates
+├── env/                  # Core RL mechanics
+│   └── negotiation_env.py# Custom Gymnasium multi-turn bargaining env
+├── models/               # The AI Brains
+│   ├── trained_buyer.zip # PPO-trained Buyer agent
+│   └── trained_seller.zip# PPO-trained Seller agent
+├── training/             # RL Training pipeline
+│   └── train.py          # Scripts to retrain and tweak the models
+└── SS/                   # Screenshots and assets
 ```
 
 ---
 
-## 🚀 Installation & Setup
+## Roadmap / Future Goals ⚠️
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/MuhammadTahaNasir/Terry.git
-   cd Terry
-   ```
-
-2. **Create a virtual environment**:
-   ```bash
-   python -m venv venv
-   # On Windows:
-   venv\Scripts\activate
-   # On Mac/Linux:
-   source venv/bin/activate
-   ```
-
-3. **Install dependencies**:
-   *(Ensure you have the required ML libraries installed)*
-   ```bash
-   pip install gymnasium stable-baselines3 torch flask numpy matplotlib seaborn pandas
-   ```
-
-4. **Run the application**:
-   ```bash
-   python app/app.py
-   ```
-
-5. **Access the application**:
-   Open your browser and navigate to `http://127.0.0.1:5000`
+Development is ongoing! Here is what's next:
+- **LLM Integration:** Moving away from numerical inputs to true natural language parsing (e.g., *"I'll give you $90 right now in cash"*).
+- **Auction Mode:** Multi-party bidding where 2+ AI agents compete for a single Seller's item.
+- **Leaderboards:** Global scoring system ranking human negotiators against the Hard AI.
 
 ---
 
-## 🧠 Architecture
+## License & Contributing
 
-### 1. The Environment Layer (`env/`)
-A custom **Gymnasium** environment that defines the rules of negotiation. It handles action spaces (proposing prices, accepting, walking away), tracks the hidden floor/budget constraints, and calculates rewards based on successful deals and saved margins.
+This project is open-source under the **MIT License**.
 
-### 2. The RL Logic Layer (`models/` & `training/`)
-Utilizes **Stable-Baselines3 (PPO)** to train agents over thousands of episodes. The AI learns when to hold firm, when to make a concession, and how to maximize its surplus without triggering a walk-away from the opponent.
+Want to contribute? 
+1. Fork the repository.
+2. Implement your feature (e.g., a new AI personality).
+3. Submit a Pull Request.
 
-### 3. The Presentation Layer (`app/`)
-A **Flask** backend that bridges the Python RL models with a sleek HTML/CSS/JS frontend. It handles state persistence during Human vs AI sessions and streams chat logs and analytics directly to the UI.
-
----
-
-## 🔮 Future Enhancements
-- **LLM Integration:** Parse natural language inputs so humans can type real sentences instead of numbers.
-- **Personality Profiles:** Distinct AI models trained to be Aggressive, Cooperative, or Unpredictable.
-- **Multi-Party Bidding:** Expanding the environment to support auction-style negotiations with multiple AI buyers.
-
----
-
-## 📜 License
-This project is open-source and available under the MIT License.
+*Designed and Developed by Muhammad Taha Nasir.*
