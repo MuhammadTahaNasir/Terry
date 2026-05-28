@@ -17,7 +17,7 @@
 
 ---
 
-![Simulator Interface](SS/1.png)
+![Simulator Interface](screenshots/1.png)
 
 ---
 
@@ -48,7 +48,7 @@
 ---
 
 <div align="center">
-  <img src="SS/10.png" alt="Simulator Analytics" width="80%">
+  <img src="screenshots/10.png" alt="Simulator Analytics" width="80%">
 </div>
 
 ---
@@ -56,6 +56,13 @@
 ## Architecture
 
 Three powerful layers work seamlessly together:
+
+<div align="center">
+  <img src="screenshots/architecture_digital.png" alt="Digital Architecture Diagram" width="80%">
+  <br><br>
+  <img src="screenshots/architecture_sketch.png" alt="Hand-drawn Architecture Diagram" width="80%">
+</div>
+<br>
 
 | Component | Function | Built with |
 |-----------|---------------|------------|
@@ -105,7 +112,7 @@ Terry/
 │   └── trained_seller.zip# PPO-trained Seller agent
 ├── training/             # RL Training pipeline
 │   └── train.py          # Scripts to retrain and tweak the models
-└── SS/                   # Screenshots and assets
+└── screenshots/            # Screenshots and assets
 ```
 
 ---
