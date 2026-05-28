@@ -58,9 +58,9 @@
 Three powerful layers work seamlessly together:
 
 <div align="center">
-  <img src="screenshots/architecture_digital.png" alt="Digital Architecture Diagram" width="80%">
+  <img src="screenshots/architecture_pipeline.png" alt="Machine Learning Pipeline Architecture" width="80%">
   <br><br>
-  <img src="screenshots/architecture_sketch.png" alt="Hand-drawn Architecture Diagram" width="80%">
+  <img src="screenshots/architecture_flowchart.png" alt="RAG-Style System Flowchart" width="80%">
 </div>
 <br>
 
