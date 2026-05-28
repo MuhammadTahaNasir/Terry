@@ -98,13 +98,7 @@ After starting the server, open **`http://127.0.0.1:5000`** in your browser.
 
 ---
 
-## Research Poster
 
-<div align="center">
-  <img src="screenshots/academic_poster.png" alt="Nego Bots Academic Poster" width="100%">
-</div>
-
----
 
 ## Project Structure
 
