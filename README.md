@@ -11,7 +11,7 @@
 
 **Nego Bots is an interactive web-based simulator where you can watch AI models battle over pricing, or step into the arena yourself and test your haggling skills against a mathematically ruthless AI Seller.**
 
-[Explore the Code](#architecture) • [Setup Guide](#quick-install) • [Features](#features-breakdown)
+[Explore the Code](#explore-the-code) • [Setup Guide](#setup-guide) • [Features](#features)
 
 </div>
 
@@ -35,7 +35,7 @@
 
 ---
 
-## Features Breakdown
+## Features
 
 | Feature | What it does |
 |---------|--------------|
@@ -53,7 +53,7 @@
 
 ---
 
-## Architecture
+## Explore the Code
 
 Three powerful layers work seamlessly together:
 
@@ -72,7 +72,7 @@ Three powerful layers work seamlessly together:
 
 ---
 
-## Quick Install
+## Setup Guide
 
 Get the simulator running locally in seconds.
 
